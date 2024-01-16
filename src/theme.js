@@ -5,7 +5,8 @@ const theme = {
       textWhite: 'white',
       primary: '#0366d6',
       secondary: '#3A3B3C',
-      mainBackground: '#e1e4e8'
+      mainBackground: '#e1e4e8',
+      error: '#d73a4a'
     },
     fontSizes: {
       body: 14,
