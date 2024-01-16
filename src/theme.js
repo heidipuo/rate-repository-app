@@ -19,6 +19,7 @@ const theme = {
       normal: '400',
       bold: '700',
     },
+    borderRadius: 5
   };
   
   export default theme;

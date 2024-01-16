@@ -1,6 +1,9 @@
 import { View, Image, StyleSheet } from "react-native-web";
 import Text from "./Text";
 
+import theme from "../theme";
+
+
 const styles = StyleSheet.create({
     flexContainer: {
         display: 'flex',
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
     logo: {
         width: 50,
         height: 50,
-        borderRadius: 7   
+        borderRadius: theme.borderRadius  
     }
 })
 
@@ -46,9 +49,19 @@ const RepositoryItem = ({item}) =>{
                 source={{uri: item.ownerAvatarUrl}}>
               </Image>
             <View style={styles.flexItemB}>
-                <View style={styles.flexItemC}><Text fontWeight='bold' fontSize='subheading'>{item.fullName}</Text></View>
-                <View style={styles.flexItemC}><Text color='textSecondary' >{item.description}</Text></View>
-                <View style={styles.flexItemC}><Text backgroundColor='backgroundBlue' style={{padding: 5, borderRadius: 7}}>{item.language}</Text></View>
+                <View style={styles.flexItemC}>
+                    <Text fontWeight='bold' fontSize='subheading'>{item.fullName}</Text>
+                </View>
+                <View style={styles.flexItemC}>
+                    <Text color='textSecondary' >{item.description}</Text>
+                </View>
+                <View style={styles.flexItemC}>
+                    <Text 
+                        backgroundColor='backgroundBlue' 
+                        style={{padding: 5, borderRadius: theme.borderRadius}}>
+                            {item.language}
+                    </Text>
+                </View>
             </View>
             
             </View>
