@@ -7,8 +7,6 @@ import Text from './Text';
 import theme from '../theme';
 import useSignIn from '../hooks/useSignIn';
 
-
-
 const styles = StyleSheet.create ({
     flexContainer: {
         backgroundColor: 'white',
@@ -28,7 +26,6 @@ const styles = StyleSheet.create ({
         fontWeight: theme.fontWeights.bold,
         color: 'white',
         fontSize: theme.fontSizes.subheading,
-     
     }  
 })
 
@@ -68,7 +65,8 @@ const SignInForm = ({ onSubmit }) => {
     
       try {
         const { data } = await signIn({ username, password });
-        console.log(data.authenticate.accessToken);
+        //AuthStorage.setAccessToken(data.authenticate.accessToken)
+        console.log('form', data.authenticate.accessToken)
       } catch (e) {
         console.log(e);
       }
